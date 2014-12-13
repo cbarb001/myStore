@@ -6,4 +6,6 @@ class CreateProducts < ActiveRecord::Migration
     	t.decimal :price, precision: 8, scale: 2
     end
   end
+
+  drop_table :users
 end

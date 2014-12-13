@@ -1,4 +1,5 @@
 class StoreController < ApplicationController
-	def index
+	def show
+		@products = Product.order(:title)
 	end
 end
