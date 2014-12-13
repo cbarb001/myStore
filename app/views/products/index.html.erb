@@ -1,0 +1,13 @@
+<br><br><br>
+<h1> products/index.html.erb </h1>
+
+  <% @products.each do |product| %>
+    <% cache ['entry', product] do %>
+        <h3><%= product.title %></h3>
+        <%= sanitize(product.description) %>
+        <%= number_to_currency(product.price) %><br>
+        <%= link_to 'Edit', edit_product_path(product) %> |
+        <%= link_to 'Delete', product, method: :delete,
+                  data: { confirm: 'Are you sure?' } %>
+    <% end %>
+  <% end %>

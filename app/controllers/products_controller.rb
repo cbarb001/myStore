@@ -9,7 +9,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
-    @products = Product.order(:title)
+    
   end
 
   # GET /products/new
@@ -29,7 +29,7 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to @product,
+        format.html { redirect_to products_path,
           notice: 'Product was successfully added.' }
         format.json { render action: 'show', status: :created,
           location: @product }
@@ -46,7 +46,7 @@ class ProductsController < ApplicationController
   def update
     respond_to do |format|
       if @product.update(product_params)
-        format.html { redirect_to @product,
+        format.html { redirect_to products_path,
           notice: 'Product was successfully updated.' }
         format.json { head :no_content }
       else

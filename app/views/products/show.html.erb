@@ -1,12 +1,5 @@
-<!-- products/show.html.erb -->
 
-  <% @products.each do |product| %>
-    <% cache ['entry', product] do %>
-        <h3><%= product.title %></h3>
-        <%= sanitize(product.description) %>
-        <%= number_to_currency(product.price) %><br>
-        <%= link_to 'Edit', edit_product_path(@product) %> |
-    
+<br><br><br>
+<h1> products/show.html.erb </h1>
 
-    <% end %>
-  <% end %>
+
