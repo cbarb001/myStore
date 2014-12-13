@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
 
+#used to add the twitter bootstrap library
+gem 'bootstrap-sass', '~> 3.2.0'
+
 # Use better Erros to shows errors
 gem 'better_errors'
 
