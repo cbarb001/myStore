@@ -18,5 +18,6 @@ Rails.application.routes.draw do
 
   get 'store/:id' => 'store#show', as: :show_store
 
-  # resources :store
+
+   resources :store
 end
