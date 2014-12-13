@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem "paperclip", "~> 4.2"
 
 #used to add the twitter bootstrap library
 gem 'bootstrap-sass', '~> 3.2.0'
