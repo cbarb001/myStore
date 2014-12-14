@@ -43,7 +43,7 @@ Rails.application.routes.draw do
 
   get    'line_items/new' =>       'line_items#new', as: :new_line_item
 
-  get    'line_items/:id' =>       'line_items#show',     as: :line_item
+  # get    'line_items/:id' =>       'line_items#show',     as: :line_item
 
   get    'line_items/:id/edit' =>  'line_items#edit', as: :edit_line_item
 
