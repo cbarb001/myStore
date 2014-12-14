@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+
   # GET /products
   # GET /products.json
   def index
@@ -9,7 +10,6 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
-    
   end
 
   # GET /products/new
@@ -19,7 +19,6 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
-    @product = Product.find(params[:id])
   end
 
   # POST /products
@@ -29,8 +28,8 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to products_path,
-          notice: 'Product was successfully added.' }
+        format.html { redirect_to @product,
+          notice: 'Product was successfully created.' }
         format.json { render action: 'show', status: :created,
           location: @product }
       else
@@ -46,7 +45,7 @@ class ProductsController < ApplicationController
   def update
     respond_to do |format|
       if @product.update(product_params)
-        format.html { redirect_to products_path,
+        format.html { redirect_to @product,
           notice: 'Product was successfully updated.' }
         format.json { head :no_content }
       else

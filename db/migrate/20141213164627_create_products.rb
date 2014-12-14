@@ -7,5 +7,5 @@ class CreateProducts < ActiveRecord::Migration
     end
   end
 
-  drop_table :users
+
 end
