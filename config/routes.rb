@@ -16,10 +16,39 @@ Rails.application.routes.draw do
 
   delete 'products/:id' =>       'products#destroy', as: :delete
 
+  # routes for store
   get 'store/:id' => 'store#show', as: :show_store
 
+  # routes for carts
 
-   resources :carts
+  get    'carts/' =>  'carts#index',    as: :carts
 
-   resources :line_items
+  post   'carts/' =>   'carts#create'
+
+  get    'carts/new' =>       'carts#new', as: :new_cart
+
+  get    'carts/:id' =>       'carts#show',     as: :cart
+
+  get    'carts/:id/edit' =>  'carts#edit', as: :edit_cart
+
+  patch  'carts/:id' =>       'carts#update'
+
+  delete 'carts/:id' =>       'carts#destroy'
+
+  # routes for line_items
+
+  get    'line_items/' =>  'line_items#index',    as: :line_items
+
+  post   'line_items/' =>   'line_items#create'
+
+  get    'line_items/new' =>       'line_items#new', as: :new_line_item
+
+  get    'line_items/:id' =>       'line_items#show',     as: :line_item
+
+  get    'line_items/:id/edit' =>  'line_items#edit', as: :edit_line_item
+
+  patch  'line_items/:id' =>       'line_items#update'
+
+  delete 'line_items/:id' =>       'line_items#destroy'
+
 end
