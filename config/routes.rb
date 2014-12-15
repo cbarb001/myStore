@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   root 'store#index', as: 'store'
 
   # routes for products
+
+  get    'products/:id/who_bought' => 'products#who_bought', as: :who_bought_product
+
   get    'products/' =>  'products#index',    as: :products
 
   post   'products/' =>   'products#create'
@@ -50,5 +53,13 @@ Rails.application.routes.draw do
   patch  'line_items/:id' =>       'line_items#update'
 
   delete 'line_items/:id' =>       'line_items#destroy'
+
+  # routes for orders
+
+  resources :orders
+
+
+
+  # get 'orders/new' => 'orders#new', as: :new_order
 
 end

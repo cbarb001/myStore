@@ -1,0 +1,16 @@
+<%= form_for(@order) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, size: 40 %><br>
+
+    <%= f.label :address %>
+    <%= f.text_area :address, rows: 3, cols: 40 %><br>
+
+    <%= f.label :email %>
+    <%= f.email_field :email, size: 40 %><br>
+
+    <%= f.label :pay_type %>
+
+    <%= f.select :pay_type, Order::PAYMENT_TYPES, prompt: 'Select a payment method' %><br>
+
+    <%= f.submit 'Place Order' %>
+<% end %>
