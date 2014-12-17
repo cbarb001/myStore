@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+# used to upload images
 gem "paperclip", "~> 4.2"
 
 #used to add the twitter bootstrap library
