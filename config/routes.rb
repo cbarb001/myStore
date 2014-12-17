@@ -56,19 +56,48 @@ Rails.application.routes.draw do
 
   # routes for orders
 
-  resources :orders
+  get    'orders/' =>  'orders#index',    as: :orders
+
+  post   'orders/' =>   'orders#create'
+
+  get    'orders/new' =>       'orders#new', as: :new_order
+
+  get    'orders/:id' =>       'orders#show',     as: :order
+
+  get    'orders/:id/edit' =>  'orders#edit', as: :edit_order
+
+  patch  'orders/:id' =>       'orders#update'
+
+  delete 'orders/:id' =>       'orders#destroy'
 
   # routes for users
 
-  resources :users
+  get    'users/' =>  'users#index',    as: :users
+
+  post   'users/' =>   'users#create'
+
+  get    'users/new' =>       'users#new', as: :new_user
+
+  get    'users/:id' =>       'users#show',     as: :user
+
+  get    'users/:id/edit' =>  'users#edit', as: :edit_user
+
+  patch  'users/:id' =>       'users#update'
+
+  delete 'users/:id' =>       'users#destroy'
 
   # routes for sessions //new //create //destory
 
-  post   'sessions/' =>   'sessions#create'
+  get    'sessions/' =>  'sessions#index',    as: :sessions
 
-  get    'sessions/new' =>       'sessions#new', as: :new_session
+   controller :sessions do
+      get 'login' => :new
+      post 'login' => :create
+   end
 
-  delete 'sessions/:id' =>       'sessions#destroy'
+   delete 'sessions/:id' =>       'sessions#destroy'
+
+
 
 
   # get 'orders/new' => 'orders#new', as: :new_order
