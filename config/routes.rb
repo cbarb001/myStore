@@ -58,6 +58,17 @@ Rails.application.routes.draw do
 
   resources :orders
 
+  # routes for users
+
+  resources :users
+
+  # routes for sessions //new //create //destory
+
+  post   'sessions/' =>   'sessions#create'
+
+  get    'sessions/new' =>       'sessions#new', as: :new_session
+
+  delete 'sessions/:id' =>       'sessions#destroy'
 
 
   # get 'orders/new' => 'orders#new', as: :new_order
