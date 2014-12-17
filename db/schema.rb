@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20141217181450) do
     t.string   "title"
     t.text     "description"
     t.decimal  "price",               precision: 8, scale: 2
+    t.string   "category"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "avatar_file_name"

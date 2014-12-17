@@ -59,3 +59,7 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem "binding_of_caller"
+
+# gems for angular
+gem 'bower-rails'
+gem 'angular-rails-templates'
