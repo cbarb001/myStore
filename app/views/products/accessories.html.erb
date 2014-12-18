@@ -1,1 +1,22 @@
-accessories.html.erb
+<div class="product-title">
+  <h1>Accessories</h1>
+</div>
+
+
+<br><br><br>
+<div class="product-list">
+  <% cache ['store', Product.latest] do %>
+    <% @products.each do |product| %>
+      <% cache ['entry', product] do %>
+      <% if product.category == "accessories"%>
+        <%= product.title %><br>
+        <%= product.description %><br>
+        <%= product.price %><br>
+        <%= image_tag product.avatar.url(:medium) %>
+        
+        <%= button_to 'Add to Cart', line_items_path(product_id: product) %><br>
+      <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>

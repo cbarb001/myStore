@@ -20,9 +20,26 @@
   text-align: center;
 }
 
-.right1 {
-	margin-left: 85ex;
+
+.thumbnail > img, .thumbnail a > img{
+
 }
-.right2 {
-	margin-left: 2ex;
+
+.thumbnail{
+	color:blue;
+}
+
+h4, .h4{
+	color:aqua;
+}
+
+.product-list{
+	border: 1px solid red;
+	padding-left: 10ex;
+}
+
+.product-title{
+	border-bottom: 1px solid lightgray;
+	font-size: 5ex;
+	text-align: center;
 }

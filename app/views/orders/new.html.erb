@@ -12,5 +12,7 @@
 
     <%= f.select :pay_type, Order::PAYMENT_TYPES, prompt: 'Select a payment method' %><br>
 
-    <%= f.submit 'Place Order' %>
+    <%= f.submit 'Place Order', data: { toggle: "modal", target: "#ajax-modal" } %>
+
+    <%= render 'orders/modal' %>
 <% end %>

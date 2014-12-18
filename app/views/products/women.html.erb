@@ -1,18 +1,21 @@
-<h1>women.html.erb</h1>
+<div class="product-title">
+  <h1>Women's T-Shirts</h1>
+</div>
 
 <br><br><br>
-
-<% cache ['store', Product.latest] do %>
-  <% @products.each do |product| %>
-    <% cache ['entry', product] do %>
-    <% if product.category == "women"%>
-      <%= product.title %><br>
-      <%= product.description %><br>
-      <%= product.price %><br>
-      <%= image_tag product.avatar.url(:medium) %>
-      
-      <%= button_to 'Add to Cart', line_items_path(product_id: product) %><br>
-    <% end %>
+<div class="product-list">
+  <% cache ['store', Product.latest] do %>
+    <% @products.each do |product| %>
+      <% cache ['entry', product] do %>
+      <% if product.category == "women"%>
+        <%= product.title %><br>
+        <%= product.description %><br>
+        <%= product.price %><br>
+        <%= image_tag product.avatar.url(:medium) %>
+        
+        <%= button_to 'Add to Cart', line_items_path(product_id: product) %><br>
+      <% end %>
+      <% end %>
     <% end %>
   <% end %>
-<% end %>
+</div>
