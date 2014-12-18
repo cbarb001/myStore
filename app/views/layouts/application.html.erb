@@ -2,9 +2,9 @@
 <html>
 <head>
   <title>MyStore</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= csrf_meta_tags %>
   <!-- bootstrap -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
@@ -37,13 +37,23 @@
 	                        <a href="#">Contact</a>
 	                    </li>
 						
-
-	                    <li class = "right1">
-	                    	<%= link_to 'Sign Up', new_user_path %> | 
-	                    </li>
-	                    <li class = "right2">
-	                    	<%= link_to 'Log In', login_path%> 
-	                    </li>
+						<% if !session[:user_id] %>
+		                    <li class = "right1">
+		                    	<%= link_to 'Sign Up', new_user_path %> | 
+		                    </li>
+		                    <li class = "right2">
+		                    	<%= link_to 'Log In', login_path%> 
+		                    </li>
+		                 <% end %>
+	                    <% if session[:user_id] %>
+		                    <li class = "right1">
+		                    	<%= link_to 'Edit Products', sessions_path %> | 
+		                    </li>
+		                    <li>
+		                    	<%= link_to 'Logout', logout_path, method: :delete   %>
+		                    </li>
+	                    
+	                    <% end %>
 	                </ul>
 	            </div>
 	            <!-- /.navbar-collapse -->

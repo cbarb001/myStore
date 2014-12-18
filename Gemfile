@@ -63,3 +63,6 @@ gem "binding_of_caller"
 # gems for angular
 gem 'bower-rails'
 gem 'angular-rails-templates'
+
+#adds console log to ruby
+gem "console.log"
