@@ -3,29 +3,30 @@ Rails.application.routes.draw do
 
   # routes for products
 
-  resources :products
 
-  # get    'products/:id/who_bought' => 'products#who_bought', as: :who_bought_product
+   get    'products/:id/who_bought' => 'products#who_bought', as: :who_bought_product
 
-  # get    'products/' =>  'products#index',    as: :products
+   get    'products/' =>  'products#index',    as: :products
 
-  # get 'products/men/' => 'products#men', as: :men
+   get 'products/men/' => 'products#men', as: :men
 
-  # get 'products/women' => 'products#women', as: :women
+   get 'products/women' => 'products#women', as: :women
 
-  # get 'products/accessories' => 'products#accessories', as: :accessories
+   get 'products/accessories' => 'products#accessories', as: :accessories
 
-  # post   'products/' =>   'products#create'
+  post   'products/' =>   'products#create'
 
-  # get    'products/new' =>       'products#new', as: :new_product
+  get    'products/new' =>       'products#new', as: :new_product
 
-  # get    'products/:id' =>       'products#show',     as: :product
+  get    'products/:id' =>       'products#show',     as: :product
 
-  # get    'products/:id/edit' =>  'products#edit', as: :edit_product
+  get    'products/:id/edit' =>  'products#edit', as: :edit_product
 
-  # patch  'products/:id' =>       'products#update'
+  patch  'products/:id' =>       'products#update'
 
-  # delete 'products/:id' =>       'products#destroy', as: :delete
+
+
+  delete 'products/:id' =>       'products#destroy'
 
   # routes for store
   get 'store/:id' => 'store#show', as: :show_store
