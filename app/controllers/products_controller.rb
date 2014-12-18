@@ -7,10 +7,17 @@ class ProductsController < ApplicationController
     @products = Product.all
   end
 
-  def accessories
-
+  def men
+    @products = Product.all
   end
 
+  def women
+    @products = Product.all
+  end
+
+  def accessories
+    @products = Product.all
+  end
   # GET /products/1
   # GET /products/1.json
   def show

@@ -7,6 +7,12 @@ Rails.application.routes.draw do
 
   get    'products/' =>  'products#index',    as: :products
 
+  get 'products/men/' => 'products#men', as: :men
+
+  get 'products/women' => 'products#women', as: :women
+
+  get 'products/accessories' => 'products#accessories', as: :accessories
+
   post   'products/' =>   'products#create'
 
   get    'products/new' =>       'products#new', as: :new_product
