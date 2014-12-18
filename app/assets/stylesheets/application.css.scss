@@ -34,12 +34,21 @@ h4, .h4{
 }
 
 .product-list{
-	border: 1px solid red;
-	padding-left: 10ex;
+	padding: 10px;
 }
 
 .product-title{
 	border-bottom: 1px solid lightgray;
 	font-size: 5ex;
 	text-align: center;
+}
+
+.product{
+	padding: 0;
+	display:inline-block;
+	padding-left: 5ex;
+}
+
+.product > img{
+	max-height: 200px;
 }

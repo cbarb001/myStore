@@ -1,22 +1,27 @@
 <br><br><br>
 
-<% cache ['store', Product.latest] do %>
-  <% @products.each do |product| %>
-    <% cache ['entry', product] do %>
-      <%= product.title %><br>
-      <%= product.description %><br>
-      <%= product.price %><br>
-      <%= product.category %><br>
-      <%= image_tag product.avatar.url(:medium) %><br>
-      
-      <%= link_to 'Edit', edit_product_path(product) %><br/>
-      <%= link_to 'Delete', product, method: :delete,
-                    data: { confirm: 'Are you sure?' } %>
-    <% end %>
-  <% end %>
-<% end %>
+  <% cache ['store', Product.latest] do %>
+  <div class="product-list">
+    <% @products.each do |product| %>
+      <% cache ['entry', product] do %>
+        <div class="product">
 
+        <%= product.title %> | 
+        <%= product.description %> | 
+        <%= number_to_currency(product.price) %> |
+        <%= product.category %><br>
+        <%= image_tag product.avatar.url(:medium) %><br>
+        
+        <%= link_to 'Edit', edit_product_path(product) %> | 
+        <%= link_to 'Delete', product, method: :delete,
+                      data: { confirm: 'Are you sure?' } %><br>
+        </div>
+      <% end %>
+    <% end %>
+    </div>
+  <% end %>
 
 <br><br><br><br><br><br><br>
   <%= link_to 'Add Item', new_product_path%>
   <br><br><br>
+</div>
