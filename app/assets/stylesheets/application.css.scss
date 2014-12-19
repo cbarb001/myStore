@@ -29,9 +29,7 @@
 	color:blue;
 }
 
-h4, .h4{
-	color:aqua;
-}
+
 
 .product-list{
 	padding: 10px;
@@ -52,3 +50,32 @@ h4, .h4{
 .product > img{
 	max-height: 200px;
 }
+
+
+th, td{
+	border: 1px solid gray;
+	width: 100%;
+	font-size: 7ex;
+}
+
+.checkout-buttons{
+	padding-left: 50%;
+}
+
+.product-list{
+	padding-left: 5ex;
+}
+
+
+#notice{
+	color: red;
+	border: 1px solid red;
+	padding: 10px;
+	width: 100%;
+	font-size: 5ex;
+	text-align: center;
+}
+
+
+
+
