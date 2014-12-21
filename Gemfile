@@ -64,4 +64,10 @@ gem "binding_of_caller"
 gem 'bower-rails'
 gem 'angular-rails-templates'
 
+group :production do
+
+  #gem for heroku to handle assets
+  gem 'rails_12factor', '0.0.2'
+
+end
 
