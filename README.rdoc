@@ -1,7 +1,0 @@
-== My Store
-
-
-This app is a web store. The technologies used are Ruby, Rails, Bootstrap, and psql.
-
-
-
