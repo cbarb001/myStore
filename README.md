@@ -1,4 +1,4 @@
-# My Store Web App
+# My Store - Web App
 
 
 ### An online store where the seller is able to:
@@ -8,7 +8,7 @@
 * Categorize items
 
 ### and the buyer is able to:
-* View iteems
+* View items
 * Add items to cart
 * Remove items from cart
 * Checkout
